@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class ReverseInteger{
+      
+    
+    static int reverse(int n){
+        
+      int reverse = 0;
+      int remainder;   
+        
+      while(n!=0){
+           
+        remainder = n%10;
+        reverse = (reverse*10) + remainder;
+        n = n/10;
+      }
+        
+      return reverse;
+    }
+      
+   // Driver Function
+    public static void main (String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter an Integer to be reversed");
+        int n=sc.nextInt();
+          
+        System.out.print("Reversed Number is "+ reverse(n));
+    }
+}
